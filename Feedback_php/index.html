@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(to left,rgb(14, 6, 56),rgb(121, 245, 204));
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        form{
+            box-shadow: 2px 3px 5px black;
+            width: 300px;
+            height: 350px;
+        }
+        .box{
+            padding-left: 520px;
+            margin-top: 9%;
+        }
+        .txt{
+            background: none;
+            border: 0;
+            border-bottom: 2px solid black;
+            padding-bottom: 9px;
+            margin-top: 10px;
+        }
+        .btn{
+            border-radius: 20px;
+            padding: 9px;
+            background-color: red;
+            color: azure;
+            font-size: large;
+            margin-top: 8%;
+            margin-left: 100px;
+        }
+        .btn:hover{
+            background-color: rgb(14, 112, 58);
+        }
+        label{
+            text-align: center;
+            margin-top: 9px;
+            margin-left: 30px;
+        }
+        .lil{
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+        .lis{
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+        h2{
+            text-align: center;
+            color: azure;
+            font-family: ;
+            text-shadow: 1px 1px 2px black , 0 1px 25px blue,0 1px 5px  darkblue;
+            padding-top: 5px;
+        }
+        .rating {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label:last-child {
+  position: static;
+}
+
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating label .icon {
+  float: left;
+  color: transparent;
+}
+
+.rating label:last-child .icon {
+  color: #000;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+  color: #09f;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: #000;
+  text-shadow: 0 0 5px #09f;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+       
+   
+    <h1>Upload Your Information</h1>
+    <form action="sub.php" method="POST" enctype="multipart/form-data">
+        <h2>Feedback</h2>
+        <label>Name</label>  <input type="text" name="name" class="txt"><br>
+        <label>Email</label><input type="text" name="email" class="txt"><br>
+        <br><label >Feedback : <form class="rating"><br>
+            <label>
+              <input type="radio" name="stars" value= 1 />
+              <span class="icon">★</span>
+            </label>
+            <br>
+            <label>
+              <input type="radio" name="stars" value=2 />
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+            </label><br>
+            <label>
+              <input type="radio" name="stars" value=3 />
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+              <span class="icon">★</span>   
+            </label><br>
+            <label>
+              <input type="radio" name="stars" value=4 />
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+            </label><br>
+            <label>
+              <input type="radio" name="stars" value=5 />
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+              <span class="icon">★</span>
+            </label> 
+           </form>
+           <input type="submit" class="btn" value="submit">
+    </label>  
+          
+    </form>
+    </div>
+</body>
+</html>
+</body>
+</html>
